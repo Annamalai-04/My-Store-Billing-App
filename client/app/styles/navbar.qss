@@ -1,0 +1,35 @@
+#navbar {
+    background-color: white;
+    border-bottom: 2px solid black;
+}
+
+
+#logo {
+    color: black;
+    background: transparent;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+#navbar QPushButton {
+    background-color: transparent;
+    color: black;
+
+    border: none;
+
+    padding: 8px 20px;
+
+    font-size: 18px;
+}
+
+
+#navbar QPushButton:hover {
+    background-color: #eeeeee;
+}
+
+
+#navbar QPushButton:pressed {
+    background-color: #dddddd;
+}

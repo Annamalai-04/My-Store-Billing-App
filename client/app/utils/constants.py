@@ -1,0 +1,2 @@
+API_BASE_URL = "http://100.62.163.5/api"
+REQUEST_TIMEOUT = 15

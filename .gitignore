@@ -1,0 +1,180 @@
+# =========================================================
+# MyStoreApp - Root Git Ignore
+# =========================================================
+
+
+# =========================================================
+# PYTHON CLIENT - PySide6
+# =========================================================
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+# Python packaging
+*.egg
+*.egg-info/
+dist/
+**/dist/
+build/
+**/build/
+pip-wheel-metadata/
+
+# PyInstaller generated files
+*.spec
+
+# MyStoreApp generated EXE files
+MyStoreApp.exe
+MyStoreAppUpdater.exe
+
+# Generated update files
+*.update.exe
+
+# Python test/cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+
+
+# =========================================================
+# PYTHON / IDE
+# =========================================================
+
+.vscode/
+.idea/
+
+# VS Code local settings
+*.code-workspace
+
+
+# =========================================================
+# JAVA / SPRING BOOT SERVER
+# =========================================================
+
+# Maven
+target/
+**/target/
+
+# Maven wrapper cache
+.mvn/wrapper/maven-wrapper.jar
+
+# Java compiled files
+*.class
+
+# Spring Boot generated files
+*.jar
+*.war
+
+# Logs
+*.log
+
+# Eclipse
+.metadata/
+.classpath
+.project
+.settings/
+.factorypath
+
+# STS
+.springBeans
+.sts4-cache/
+
+
+# =========================================================
+# SERVER IDE
+# =========================================================
+
+server/.metadata/
+server/billing_server/.metadata/
+server/billing_server/.settings/
+server/billing_server/.classpath
+server/billing_server/.project
+
+
+# =========================================================
+# KUBERNETES - DO NOT IGNORE
+# =========================================================
+
+# IMPORTANT:
+# Keep Kubernetes YAML files in Git.
+#
+# Examples:
+# server/billing_server/k8s/
+# deployment.yaml
+# service.yaml
+# ingress.yaml
+
+
+# =========================================================
+# SECRETS
+# =========================================================
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Private keys
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+
+# AWS credentials
+.aws/
+credentials
+
+# Do NOT commit passwords/config secrets
+application-local.properties
+application-prod.properties
+server/billing_server/src/main/resources/application.properties
+
+
+# =========================================================
+# DATABASE / LOCAL FILES
+# =========================================================
+
+*.sql.bak
+*.dump
+*.sqlite
+*.db
+
+
+# =========================================================
+# WINDOWS
+# =========================================================
+
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# OneDrive
+*.tmp
+
+
+# =========================================================
+# TEMPORARY FILES
+# =========================================================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*~

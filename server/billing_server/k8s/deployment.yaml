@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mystoreapp-backend
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: mystoreapp-backend
+
+  template:
+    metadata:
+      labels:
+        app: mystoreapp-backend
+
+    spec:
+      containers:
+        - name: mystoreapp-backend
+          image: annamalaikumar/mystoreapp-backend:1.0
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 8080
+
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:mysql://host.docker.internal:3306/mystoreapp?useSSL=false&serverTimezone=Asia/Kolkata&allowPublicKeyRetrieval=true"
+
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "root"
+
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "Vssa13@Kumar"
