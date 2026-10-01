@@ -43,31 +43,16 @@ jobs:
       - name: Set application version
         shell: pwsh
         run: |
-
           $version = "1.0.${{ github.run_number }}"
-
           $versionFile = "client/app/utils/version.py"
 
           if (-not (Test-Path $versionFile)) {
               throw "Version file not found: $versionFile"
           }
 
-          $content = Get-Content $versionFile -Raw
-
-          $newContent = [regex]::Replace(
-              $content,
-              'APP_VERSION\s*=\s*["''][^"'']*["'']',
-              "APP_VERSION = `"$version`""
-          )
-
-          if ($newContent -eq $content) {
-              throw "APP_VERSION was not found in $versionFile"
-          }
-
-          Set-Content `
-              -Path $versionFile `
-              -Value $newContent `
-              -Encoding UTF8
+          @"
+          APP_VERSION = "$version"
+          "@ | Set-Content -Path $versionFile -Encoding UTF8
 
           Write-Host "Building MyStoreApp version $version"
 
